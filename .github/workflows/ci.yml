@@ -31,6 +31,9 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
+
+    - name: List the jar files
+      run: ls -lh /build/libs/
       
     - name: Building the docker image and publishing it to dockerHub
       uses: mr-smithers-excellent/docker-build-push@v4
@@ -39,3 +42,4 @@ jobs:
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+        tags: latest
