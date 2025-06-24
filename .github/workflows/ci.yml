@@ -40,6 +40,6 @@ jobs:
       with:
         dockerfile: ./
         image: arijit21/java-app-with-github-actions
-        registory: docker.io
+        registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
