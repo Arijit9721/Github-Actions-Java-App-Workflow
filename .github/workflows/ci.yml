@@ -38,7 +38,7 @@ jobs:
     - name: Building the docker image and publishing it to dockerHub
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
-        dockerfile: ./
+        dockerfile: ./Dockerfile
         image: arijit21/java-app-with-github-actions
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
