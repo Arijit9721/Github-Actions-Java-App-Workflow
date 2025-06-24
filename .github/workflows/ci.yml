@@ -32,13 +32,9 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
       
-    - name: Setup Gradle with Caching
-      uses: gradle/actions/setup-gradle@v4
-
     - name: Building the docker image and publishing it to dockerHub
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
-        dockerfile: ./Dockerfile
         image: arijit21/java-app-with-github-actions
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
