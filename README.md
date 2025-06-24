@@ -1,12 +1,6 @@
-##### build the project
+# Java App CI/CD with Gradle and Docker
 
-    ./gradlew build
+I used **GitHub Actions** to create a CI/CD pipeline which gets triggered on every **code commit** to the **main** branch.It builds the Java app using **Gradle** and then builds a **docker image** and publishes it to docker-registry.  
 
-##### build Docker image called java-app. Execute from root
 
-    docker build -t java-app .
-    
-##### push image to repo 
-
-    docker tag java-app demo-app:java-1.0
     
